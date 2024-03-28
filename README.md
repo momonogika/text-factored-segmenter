@@ -6,4 +6,15 @@ This encoding syntax is directly compatible with the [Marian Neural Machine Tran
 To use TextFactoredSegmenter with other toolkits, an implementation of a parser for this format, modification of the embedding lookup and, to use factors on the target side, the beam decoder is required.
 The term "TextFactoredSegmenter" applies to both a segmentation library and an encoding of text.
 
-TextFactoredSegmenter not only segments words into subwords, or _word pieces_, using the popular [SentencePiece](https://github.
+TextFactoredSegmenter not only segments words into subwords, or _word pieces_, using the popular [SentencePiece](https://github.com/google/sentencepiece) library under the hood, but also robustly handles numerals, unknown characters, allows for "phrase fixing", supports continuous scripts and much more.
+
+## Prerequisites
+
+To build TextFactoredSegmenter, you will need to install the following dependencies:
+
+#### Linux
+```
+sudo apt-get install dotnet-sdk-3.1
+sudo apt-get install dotnet-runtime-3.1
+```
+And SentencePiece. In the Windows version, SentencePiece is invoked via the SentencePiece command-line tools. It has not been tested whether the [vcpkg inst
